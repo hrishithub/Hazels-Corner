@@ -1,0 +1,30 @@
+[
+  {
+    "id": "day-75",
+    "title": "When 75 days remain",
+    "unlockAtDaysLeft": 75,
+    "seal": "rose",
+    "body": "Hazel, this is the part where consistency starts looking quiet from the outside and heroic from the inside. Keep your world small today. Food, water, one honest study block, one gentle reset."
+  },
+  {
+    "id": "day-45",
+    "title": "When 45 days remain",
+    "unlockAtDaysLeft": 45,
+    "seal": "lilac",
+    "body": "You are closer than your fear says. Do not negotiate with the loudest thought. Look at the next page. Let that be enough for now."
+  },
+  {
+    "id": "day-15",
+    "title": "When 15 days remain",
+    "unlockAtDaysLeft": 15,
+    "seal": "butter",
+    "body": "The finish line can make everything feel sharper. Let your revision become simple and kind. You do not need to become someone else to deserve a good day."
+  },
+  {
+    "id": "exam-day",
+    "title": "Exam day letter",
+    "unlockAtDaysLeft": 0,
+    "seal": "gold",
+    "body": "Go in with your whole heart. Not a perfect heart. A real one. You prepared through fear, boredom, loneliness, and days nobody saw. That matters. Breathe, read carefully, and come back to yourself between every question."
+  }
+]

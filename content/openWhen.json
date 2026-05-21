@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "anxious",
+    "title": "Open when anxiety gets loud",
+    "accent": "moon",
+    "preview": "A slower page for the moments your chest forgets there is room.",
+    "body": [
+      "Put one hand somewhere warm. The blanket, your sleeve, the side of your face. You do not need to solve the entire future from this minute.",
+      "The exam is important. So are you. Both can be true without one swallowing the other.",
+      "For now, do the smallest kind thing: drink water, unclench your jaw, and let the next breath arrive before the next thought."
+    ],
+    "tinyAction": "Read one paragraph. Then stop."
+  },
+  {
+    "slug": "lonely",
+    "title": "Open when home feels too quiet",
+    "accent": "window",
+    "preview": "For evenings when everyone feels far away.",
+    "body": [
+      "This room has seen how hard you are trying. It has seen the notes, the pauses, the quiet tears, and the way you keep coming back anyway.",
+      "You are not hard to love when you are tired. You are not behind in being human.",
+      "Somewhere, someone is rooting for the version of you who just needs company, not advice."
+    ],
+    "tinyAction": "Send a one-word message to someone safe."
+  },
+  {
+    "slug": "overwhelmed",
+    "title": "Open when everything feels too much",
+    "accent": "rain",
+    "preview": "A softer place to set the whole mountain down.",
+    "body": [
+      "You do not have to carry all 90 days at once. Today can be held in your hands. Just today.",
+      "Pick the next gentle unit: one topic, one block, one glass of water, one five-minute reset.",
+      "There is no prize for panicking perfectly. Come back to the next possible thing."
+    ],
+    "tinyAction": "Write the next three tasks. Cross out two."
+  },
+  {
+    "slug": "bad-mock",
+    "title": "Open after a bad mock test",
+    "accent": "paper",
+    "preview": "For when a number tries to tell the whole story.",
+    "body": [
+      "A mock is a map with a red circle on it. It is not a verdict. It is not your worth wearing a score.",
+      "Let it sting, then let it teach. The useful part is smaller than the shame wants you to believe.",
+      "You are allowed to be upset and still return tomorrow with a clearer plan."
+    ],
+    "tinyAction": "Find only one pattern from the mistakes."
+  },
+  {
+    "slug": "exhausted",
+    "title": "Open when you are exhausted",
+    "accent": "lamp",
+    "preview": "A permission slip for the body that has carried you.",
+    "body": [
+      "Your body is not betraying you by needing rest. It is trying to keep the lights on.",
+      "If you cannot study deeply, study gently. If you cannot study gently, recover honestly.",
+      "Rest is not a crack in discipline. It is part of staying here long enough to finish."
+    ],
+    "tinyAction": "Take a real ten-minute break, without earning it."
+  },
+  {
+    "slug": "cant-focus",
+    "title": "Open when focus will not come",
+    "accent": "star",
+    "preview": "For the foggy days when the page keeps sliding away.",
+    "body": [
+      "Focus is not a personality trait. It is weather. Some days you work with drizzle.",
+      "Make the room smaller: one tab, one notebook, one timer, one question.",
+      "You can restart without dramatizing the restart. That counts too."
+    ],
+    "tinyAction": "Set a 12-minute timer and begin badly."
+  },
+  {
+    "slug": "want-to-quit",
+    "title": "Open when you want to quit",
+    "accent": "heart",
+    "preview": "Not a lecture. Just a hand on the shoulder.",
+    "body": [
+      "Of course a part of you wants to quit. That part has been working without enough softness for a long time.",
+      "Listen to it. Feed it. Let it sleep. But do not let one exhausted hour make decisions for the whole brave year.",
+      "You can pause. You can cry. You can lower the volume. Then, when you are ready, you can take one step."
+    ],
+    "tinyAction": "Do nothing for five minutes except breathe."
+  }
+]

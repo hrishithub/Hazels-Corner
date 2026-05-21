@@ -1,0 +1,22 @@
+   ▲ Next.js 15.5.18
+   - Local:        http://127.0.0.1:3002
+   - Network:      http://127.0.0.1:3002
+
+ ✓ Starting...
+ ✓ Ready in 12.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 35.1s (1457 modules)
+ GET / 200 in 11664ms
+ GET / 200 in 276ms
+ ○ Compiling /open-when ...
+ ✓ Compiled /open-when in 3.3s (1472 modules)
+ GET /open-when 200 in 4480ms
+ GET /open-when 200 in 310ms
+ ○ Compiling /calm ...
+ ✓ Compiled /calm in 2.5s (1473 modules)
+ GET /calm 200 in 2810ms
+ GET /calm 200 in 908ms
+ GET / 200 in 222ms
+ GET / 200 in 349ms
+ ✓ Compiled in 6.1s (1487 modules)
+ ✓ Compiled in 1058ms (670 modules)

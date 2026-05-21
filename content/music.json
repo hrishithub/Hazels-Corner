@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Comfort songs",
+    "mood": "For soft evenings and feelings that need somewhere to land.",
+    "spotifyUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX0MLFaUdXnjA",
+    "note": "Press play when words feel too effortful. Let someone else hold the sentence for a while."
+  },
+  {
+    "title": "Late night study",
+    "mood": "Low light, open notebook, the world turned down.",
+    "spotifyUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO",
+    "note": "A playlist for the hour when silence becomes company."
+  },
+  {
+    "title": "Anxious days",
+    "mood": "Gentle songs for when the nervous system needs a handrail.",
+    "spotifyUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DWVrtsSlLKzro",
+    "note": "No fixing. Just a softer room around the feeling."
+  },
+  {
+    "title": "Deep focus",
+    "mood": "For clean revision blocks and less mental noise.",
+    "spotifyUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX8NTLI2TtZa6",
+    "note": "Start small. Stay with one thing. The page will warm up."
+  }
+]

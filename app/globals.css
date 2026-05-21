@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-hand: "Segoe Print", "Bradley Hand ITC", "Comic Sans MS", cursive;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #261d34;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 231, 166, 0.45), transparent 30%),
+    radial-gradient(circle at 80% 15%, rgba(216, 194, 255, 0.55), transparent 34%),
+    linear-gradient(135deg, #fff7ee 0%, #f7e3ee 42%, #eee7ff 100%);
+  overflow-x: hidden;
+}
+
+body[data-mood="night"] {
+  color: #fff2e6;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(243, 180, 200, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(216, 194, 255, 0.28), transparent 34%),
+    linear-gradient(135deg, #18152c 0%, #332745 46%, #5b416b 100%);
+}
+
+::selection {
+  background: rgba(243, 180, 200, 0.55);
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 18px 55px rgba(88, 62, 105, 0.16);
+  backdrop-filter: blur(22px);
+}
+
+.night .glass,
+body[data-mood="night"] .glass {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(35, 28, 55, 0.52);
+}
+
+.paper {
+  background:
+    linear-gradient(rgba(99, 78, 120, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 78, 120, 0.05) 1px, transparent 1px),
+    rgba(255, 248, 240, 0.72);
+  background-size: 28px 28px;
+}
+
+.pixel-corners {
+  clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
+}
+
+.spotify-frame iframe {
+  border-radius: 18px;
+}

@@ -39,7 +39,7 @@ export default function HomePage() {
               <Moon className="h-5 w-5" />
             </span>
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-plum/70">today&apos;s comfort</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-plum/70"> note of the day for Hazel 🤍</p>
               <p className="mt-3 font-hand text-2xl leading-relaxed text-ink sm:text-3xl">{message}</p>
             </div>
           </div>

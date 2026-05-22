@@ -42,6 +42,19 @@ export function getIstMood(now = new Date()) {
   return getMoodByHour(getIstHour(now));
 }
 
+export function getIstDateKey(now = new Date()) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(now);
+}
+
+export function getPreviousIstDateKey(now = new Date()) {
+  return getIstDateKey(new Date(now.getTime() - 86_400_000));
+}
+
 export function getRhythmGreeting(mood: string) {
   if (mood === "morning") {
     return {

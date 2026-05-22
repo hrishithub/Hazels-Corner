@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import { Cloud, CloudRain, Heart, Moon, Sparkles } from "lucide-react";
 import { useLocalStorage } from "@/lib/storage";
+import { getIstDateKey } from "@/lib/time";
 
 const moods = [
   {
@@ -38,7 +39,7 @@ const moods = [
 ];
 
 export function MoodCheckIn() {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = getIstDateKey();
   const [moodLog, setMoodLog] = useLocalStorage<Record<string, string>>("hazel:mood-checkins", {});
   const selected = moodLog[today];
   const selectedMood = useMemo(() => moods.find((mood) => mood.id === selected), [selected]);

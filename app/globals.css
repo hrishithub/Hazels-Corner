@@ -53,6 +53,40 @@ body[data-mood="night"] .glass {
   background: rgba(35, 28, 55, 0.52);
 }
 
+body[data-mood="night"] .text-ink {
+  color: #fff2e6;
+}
+
+body[data-mood="night"] .text-ink\/70,
+body[data-mood="night"] .text-ink\/68,
+body[data-mood="night"] .text-ink\/66,
+body[data-mood="night"] .text-ink\/62,
+body[data-mood="night"] .text-ink\/60,
+body[data-mood="night"] .text-ink\/55,
+body[data-mood="night"] .text-ink\/35 {
+  color: rgba(255, 242, 230, 0.72);
+}
+
+body[data-mood="night"] .text-plum {
+  color: #d8c2ff;
+}
+
+body[data-mood="night"] .text-plum\/70 {
+  color: rgba(216, 194, 255, 0.76);
+}
+
+body[data-mood="night"] .bg-white\/68 {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+body[data-mood="night"] .bg-white\/50,
+body[data-mood="night"] .bg-white\/48,
+body[data-mood="night"] .bg-white\/45,
+body[data-mood="night"] .bg-white\/42,
+body[data-mood="night"] .bg-white\/34 {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
 .paper {
   background:
     linear-gradient(rgba(99, 78, 120, 0.06) 1px, transparent 1px),

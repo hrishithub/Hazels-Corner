@@ -102,3 +102,8 @@ body[data-mood="night"] .bg-white\/34 {
 .spotify-frame iframe {
   border-radius: 18px;
 }
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

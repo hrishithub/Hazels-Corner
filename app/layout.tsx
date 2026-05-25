@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AppShell } from "@/components/AppShell";
+import { JourneyProgressProvider } from "@/components/journey/JourneyProgressContext";
 
 export const metadata: Metadata = {
   title: "Hazel's Corner",
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <AppShell>{children}</AppShell>
+        <JourneyProgressProvider>
+          <AppShell>{children}</AppShell>
+        </JourneyProgressProvider>
       </body>
     </html>
   );

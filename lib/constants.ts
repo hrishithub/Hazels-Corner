@@ -5,6 +5,7 @@ export const navItems = [
   { href: "/open-when", label: "Open When" },
   { href: "/music", label: "Music Corner" },
   { href: "/pokemon", label: "Journey" },
+  { href: "/planner", label: "Planner" },
   { href: "/letters", label: "Letters" },
   { href: "/calm", label: "Calm Corner" }
 ];

@@ -7,6 +7,7 @@ import { TinyWin } from "@/components/home/TinyWin";
 import { CompanionArt } from "@/components/ui/CompanionArt";
 import { SoftCard } from "@/components/ui/SoftCard";
 import { getCompanionStage, getDaysLeft } from "@/lib/time";
+import Link from "next/link";
 
 export default function HomePage() {
   const daysLeft = getDaysLeft();
@@ -59,19 +60,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-5 md:grid-cols-3">
-        {[
-          ["Open When", "letters for the day that needs a little extra hug"],
-          ["Music Corner", "songs that understand without asking too much"],
-          ["Calm Corner", "a breathing room when the page feels too sharp"]
-        ].map(([title, copy]) => (
-          <SoftCard className="transition hover:-translate-y-1" key={title}>
-            <Heart className="mb-4 h-5 w-5 fill-rose text-rose" />
-            <p className="font-display text-2xl">{title}</p>
-            <p className="mt-2 text-sm leading-6 text-ink/62">{copy}</p>
-          </SoftCard>
-        ))}
-      </section>
+<section className="grid gap-5 md:grid-cols-3">
+  {[
+    {
+      title: "Open When",
+      copy: "letters for the day that needs a little extra hug",
+      href: "/open-when"
+    },
+    {
+      title: "Music Corner",
+      copy: "songs that understand without asking too much",
+      href: "/music"
+    },
+    {
+      title: "Calm Corner",
+      copy: "a breathing room when the page feels too sharp",
+      href: "/calm"
+    }
+  ].map((item) => (
+    <Link href={item.href} key={item.title}>
+      <SoftCard className="cursor-pointer transition hover:-translate-y-1">
+        <Heart className="mb-4 h-5 w-5 fill-rose text-rose" />
+
+        <p className="font-display text-2xl">
+          {item.title}
+        </p>
+
+        <p className="mt-2 text-sm leading-6 text-ink/62">
+          {item.copy}
+        </p>
+      </SoftCard>
+    </Link>
+  ))}
+</section>
     </div>
   );
 }

@@ -7,10 +7,10 @@ export function PokemonCenter() {
   const { completedTasks, completionPercent } = useJourneyProgress();
   const message =
     completedTasks === 0
-      ? "Professor Oakley: Your companion is waiting with you. Begin with one gentle task when you can."
+      ? "Professor Oak: Your companion is waiting with you. Begin with one gentle task when you can."
       : completionPercent > 70
         ? "Nurse Joy: Your route lights are warm today. Please rest your eyes too."
-        : "Professor Oakley: Every small completion is a step closer to the doctor you are becoming.";
+        : "Professor Oak: Every small completion is one quiet step closer to Pediatrics.";
 
   return (
     <section className="glass rounded-[2rem] p-5">

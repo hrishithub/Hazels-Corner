@@ -6,9 +6,9 @@ import { Sparkles } from "lucide-react";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
 const companions = {
-  1: { name: "Stage 1", src: "/companions/stage1.png", line: "still small, still brave" },
-  2: { name: "Stage 2", src: "/companions/stage2.png", line: "growing through rainy days" },
-  3: { name: "Stage 3", src: "/companions/stage3.png", line: "ready for the final road" }
+  1: { name: "Fennekin", src: "/companions/stage1.png", line: "still small, still brave" },
+  2: { name: "Braixen", src: "/companions/stage2.png", line: "growing through rainy days" },
+  3: { name: "Delphox ", src: "/companions/stage3.png", line: "ready for the final road" }
 };
 
 export function CompanionEvolution() {

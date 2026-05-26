@@ -80,7 +80,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
           <div className="hidden rounded-3xl border border-white/50 bg-white/34 p-4 text-sm text-ink/70 lg:block">
             <Heart className="mb-3 h-4 w-4 fill-rose text-rose" />
-            You are doing better than the fear says.
+   Just be yourself, there is no one better 
           </div>
         </aside>
 

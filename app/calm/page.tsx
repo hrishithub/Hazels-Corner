@@ -30,7 +30,7 @@ export default function CalmPage() {
   return (
     <div className="pb-10">
       <PageHeader eyebrow="calm corner" title="A room for breathing">
-        <p>Nothing to optimize. Nothing to prove. Just a little space where the body can remember it is safe.</p>
+        <p>The noise gets loud sometimes, this is where you put it down.</p>
       </PageHeader>
 
       <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
@@ -56,7 +56,9 @@ export default function CalmPage() {
         <div className="space-y-5">
           <SoftCard>
             <p className="font-display text-3xl">Box breathing</p>
-            <p className="mt-3 text-sm leading-7 text-ink/66">Four seconds in. Four seconds held. Four seconds out. Four seconds held. Let the circle keep time so you do not have to.</p>
+            <p className="mt-3 text-sm leading-7 text-ink/66">Four seconds in. Four seconds hold. 
+Four seconds out. Four seconds hold.
+you don't have to think, just follow.</p>
           </SoftCard>
           <SoftCard>
             <p className="font-display text-3xl">Grounding</p>

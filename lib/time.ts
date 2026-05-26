@@ -68,7 +68,7 @@ export function getRhythmGreeting(mood: string) {
     return {
       eyebrow: "a quiet corner for the middle of the day",
       title: "good afternoon, Hazel",
-      note: "you've been holding it together since morning, the day's not done but neither are you!"
+      note: "you are studying since morning, the day's not done yet but neither are you!"
     };
   }
 
@@ -76,7 +76,7 @@ export function getRhythmGreeting(mood: string) {
     return {
       eyebrow: "a quiet corner for the evening light",
       title: "good evening, Hazel",
-      note: "you've been holding it together through another one, you can put it down now, just for a bit."
+      note: "hope the day has been gentle with you so far!"
     };
   }
 

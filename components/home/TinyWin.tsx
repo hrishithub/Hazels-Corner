@@ -43,7 +43,7 @@ export function TinyWin() {
       <div className="mb-4 flex items-center justify-between">
         <div>
           <p className="font-display text-2xl">Tiny win today</p>
-          <p className="mt-1 text-sm text-ink/62">Even opening the book with honesty counts.</p>
+          <p className="mt-1 text-sm text-ink/62">small win of the day that deserves to be remembered</p>
         </div>
         <Star className="h-7 w-7 fill-butter text-butter" />
       </div>
@@ -59,7 +59,7 @@ export function TinyWin() {
             id="tiny-win"
             maxLength={90}
             onChange={(event) => setDraft(event.target.value)}
-            placeholder="one tiny thing you did today..."
+            placeholder="leave a small win of the day here..."
             value={draft}
           />
         </div>
@@ -76,13 +76,13 @@ export function TinyWin() {
 
       {done && (
         <div className="mt-4 rounded-2xl bg-white/38 p-3 text-sm leading-6 text-ink/68">
-          <span className="font-medium text-plum">Today&apos;s tiny win:</span> {savedText || "I showed up gently today."}
+          <span className="font-medium text-plum">Today you:</span> {savedText || "I showed up gently today."}
         </div>
       )}
 
       {!done && yesterdayText && (
         <div className="mt-4 rounded-2xl bg-white/38 p-3 text-sm leading-6 text-ink/68">
-          <span className="font-medium text-plum">Yesterday, you still showed up:</span> {yesterdayText}
+          <span className="font-medium text-plum">Yesterday, you:</span> {yesterdayText}
         </div>
       )}
     </div>

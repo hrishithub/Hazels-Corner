@@ -58,7 +58,7 @@ export default function CalmPage() {
             <p className="font-display text-3xl">Box breathing</p>
             <p className="mt-3 text-sm leading-7 text-ink/66">Four seconds in. Four seconds hold. 
 Four seconds out. Four seconds hold.
-you don't have to think, just follow.</p>
+you don&apos;t have to think, just follow.</p>
           </SoftCard>
           <SoftCard>
             <p className="font-display text-3xl">Grounding</p>

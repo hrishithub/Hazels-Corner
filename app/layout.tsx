@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { AppShell } from "@/components/AppShell";
 import { JourneyProgressProvider } from "@/components/journey/JourneyProgressContext";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <JourneyProgressProvider>
           <AppShell>{children}</AppShell>
         </JourneyProgressProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -46,16 +46,13 @@ export default function MusicPage() {
         <aside className="space-y-5">
           <SoftCard>
             <Music2 className="mb-4 h-6 w-6 text-plum" />
-            <p className="font-display text-3xl">A little note for Hazel</p>
-            <p className="mt-4 font-hand text-2xl leading-relaxed text-ink/78">
-              Some days will feel heavier than others. When that happens, press play. Let the song do one small piece of holding.
+            <p className="font-display text-3xl"></p>
+            <p className="mt-4 font-hand text-2xl leading-relaxed text-ink/78 whitespace-pre-line">
+              {`People haven't always been there for me, but music always has.
+              
+              - Taylor Swift`}
             </p>
           </SoftCard>
-          <div className="rounded-[1.5rem] bg-dusk p-6 text-cream shadow-glow">
-            <p className="text-sm uppercase tracking-[0.22em] text-cream/60">today&apos;s comfort song</p>
-            <p className="mt-5 font-display text-3xl">Clean</p>
-            <p className="mt-2 text-cream/70">for the feeling after the storm passes, even if it only passes for one minute.</p>
-          </div>
         </aside>
       </div>
     </div>

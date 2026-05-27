@@ -7,7 +7,7 @@
     "body": [
       "Put one hand somewhere warm. The blanket, your sleeve, the side of your face. You do not need to solve the entire future from this minute.",
       "The exam is important. So are you. Both can be true without one swallowing the other.",
-      "For now, do the smallest kind thing: drink water, unclench your jaw, and let the next breath arrive before the next thought."
+      "For now, do the smallest kind thing: drink water, and let the next breath arrive before the next thought."
     ],
     "tinyAction": "Read one paragraph. Then stop."
   },
@@ -17,9 +17,11 @@
     "accent": "window",
     "preview": "For evenings when everyone feels far away.",
     "body": [
-      "This room has seen how hard you are trying. It has seen the notes, the pauses, the quiet tears, and the way you keep coming back anyway.",
-      "You are not hard to love when you are tired. You are not behind in being human.",
-      "Somewhere, someone is rooting for the version of you who just needs company, not advice."
+      "This room has seen everything this year. The notes, the quiet tears, the way you keep showing up anyway.",
+
+       "You don't have to perform okayness here. Not in this corner.",
+
+        "You are not as alone in this as it feels at 2am."
     ],
     "tinyAction": "Send a one-word message to someone safe."
   },
@@ -29,7 +31,7 @@
     "accent": "rain",
     "preview": "A softer place to set the whole mountain down.",
     "body": [
-      "You do not have to carry all 90 days at once. Today can be held in your hands. Just today.",
+      "You do not have to carry all the remaining days at once. Today can be held in your hands. Just today.",
       "Pick the next gentle unit: one topic, one block, one glass of water, one five-minute reset.",
       "There is no prize for panicking perfectly. Come back to the next possible thing."
     ],
@@ -39,10 +41,10 @@
     "slug": "bad-mock",
     "title": "Open after a bad mock test",
     "accent": "paper",
-    "preview": "For when a number tries to tell the whole story.",
+    "preview": "A number is not the whole story.",
     "body": [
       "A mock is a map with a red circle on it. It is not a verdict. It is not your worth wearing a score.",
-      "Let it sting, then let it teach. The useful part is smaller than the shame wants you to believe.",
+      "Let it sting. Then let it show you exactly where to go next.",
       "You are allowed to be upset and still return tomorrow with a clearer plan."
     ],
     "tinyAction": "Find only one pattern from the mistakes."
@@ -51,7 +53,7 @@
     "slug": "exhausted",
     "title": "Open when you are exhausted",
     "accent": "lamp",
-    "preview": "A permission slip for the body that has carried you.",
+    "preview": "You've been carrying a lot, come in.",
     "body": [
       "Your body is not betraying you by needing rest. It is trying to keep the lights on.",
       "If you cannot study deeply, study gently. If you cannot study gently, recover honestly.",
@@ -63,7 +65,7 @@
     "slug": "cant-focus",
     "title": "Open when focus will not come",
     "accent": "star",
-    "preview": "For the foggy days when the page keeps sliding away.",
+    "preview": "Foggy days count too.",
     "body": [
       "Focus is not a personality trait. It is weather. Some days you work with drizzle.",
       "Make the room smaller: one tab, one notebook, one timer, one question.",

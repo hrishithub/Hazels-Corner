@@ -79,7 +79,7 @@ const regions = [
     tipY: 78
   },
   {
-    name: "MD Gym",
+    name: "Pediatrics Gym",
     description: "one step closer to Pediatrics",
     icon: "crown",
     unlockAt: 93,

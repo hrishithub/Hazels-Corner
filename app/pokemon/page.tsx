@@ -13,11 +13,11 @@ export default function PokemonJourneyPage() {
             <p className="text-sm uppercase tracking-[0.24em] text-plum/70">hazel&apos;s journey</p>
             <h1 className="mt-2 font-display text-4xl leading-tight text-ink sm:text-6xl">A gentle route toward Pediatrics</h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-ink/68">
-              A cozy map for the long NEET PG road ahead. The route moves with time, and the planner only adds a little glow.
+             Complete study tasks in the planner, earn XP, evolve your Pokémon, and move one step closer to your dream Pediatrics seat.
             </p>
           </div>
           <Link className="inline-flex h-12 items-center justify-center rounded-2xl bg-plum px-5 text-sm text-white shadow-soft" href="/planner">
-            Open weekly planner
+            Open Planner
           </Link>
         </div>
       </section>

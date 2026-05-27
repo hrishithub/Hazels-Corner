@@ -18,7 +18,7 @@ export function WeeklyPlanner() {
             </div>
             <div>
               <p className="text-sm uppercase tracking-[0.22em] text-plum/70">weekly planner</p>
-              <h1 className="font-display text-4xl text-ink">Soft route planning</h1>
+              <h4 className="font-display text-4xl text-ink">Turn study goals into a Pokémon journey</h4>
             </div>
           </div>
           <div className="pixel-corners bg-white/58 px-4 py-2 text-sm text-plum">{softXp} XP</div>
@@ -52,7 +52,7 @@ export function WeeklyPlanner() {
         <div className="flex items-start gap-3">
           <Sparkles className="mt-1 h-5 w-5 text-butter" />
           <p className="font-hand text-2xl leading-relaxed text-ink">
-            Completing tasks lights the route softly. Missing one does not darken anything.
+Complete study tasks to earn XP, evolve your Pokémon companion, and unlock progress across the journey map.
           </p>
         </div>
       </section>

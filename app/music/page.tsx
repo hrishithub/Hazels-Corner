@@ -7,7 +7,7 @@ export default function MusicPage() {
   return (
     <div className="pb-10">
       <PageHeader eyebrow="music corner" title="Songs for every kind of quiet">
-        <p>Curated like a bedside lamp: not too bright, just enough to make the room feel less alone.</p>
+        <p>your playlists. your moods. press play.</p>
       </PageHeader>
 
       <div className="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">

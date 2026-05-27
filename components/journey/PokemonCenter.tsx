@@ -1,6 +1,7 @@
 "use client";
 
 import { HeartPulse } from "lucide-react";
+import Image from "next/image";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
 export function PokemonCenter() {
@@ -16,7 +17,14 @@ export function PokemonCenter() {
     <section className="glass rounded-[2rem] p-5">
       <div className="flex items-start gap-4">
         <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-rose/25 text-plum">
-          <HeartPulse className="h-7 w-7" />
+         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl">
+  <Image
+    src="/oak.png"
+    alt="Professor Oak"
+    fill
+    className="object-cover"
+  />
+</div>
         </div>
         <div>
           <p className="text-sm uppercase tracking-[0.2em] text-plum/70">pokemon center</p>

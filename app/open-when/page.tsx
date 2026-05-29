@@ -14,7 +14,7 @@ export default function OpenWhenPage() {
   return (
     <div className="pb-10">
       <PageHeader eyebrow="open when" title="For the days that need a softer door">
-        <p>Small letters for specific storms. They are not here to motivate you loudly, just to sit beside you for a minute.</p>
+        <p>Small letters for specific days. They are not here to motivate you loudly, just to sit beside you for a minute.</p>
       </PageHeader>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

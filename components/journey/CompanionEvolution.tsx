@@ -44,7 +44,7 @@ export function CompanionEvolution() {
           <motion.div className="h-full rounded-full bg-gradient-to-r from-rose via-lilac to-butter" animate={{ width: `${xpWidth}%` }} />
         </div>
         <p className="mt-3 text-sm leading-6 text-ink/62">
-          The glow responds to planner progress, but evolution follows the passing days. No guilt, just movement.
+          Your companion grows alongside the journey.
         </p>
       </div>
 

@@ -96,7 +96,7 @@ export function PlannerDayColumn({
               </div>
               <p className="font-display text-3xl text-ink">Clear {day.day}?</p>
               <p className="mt-3 text-sm leading-6 text-ink/66">
-                This will delete all tasks listed for {day.day}. Individual tasks can still be removed one by one.
+                This will delete all tasks listed for {day.day}.
               </p>
               <div className="mt-6 flex justify-end gap-3">
                 <button
@@ -137,7 +137,7 @@ export function PlannerDayColumn({
         <input
           className="w-full rounded-2xl border border-white/35 bg-white/30 px-3 py-2 text-xs text-ink placeholder:text-ink/38 focus:outline-none focus:ring-2 focus:ring-lilac/60"
           onChange={(event) => setNote(event.target.value)}
-          placeholder="soft note, optional"
+          placeholder="small note, optional"
           value={note}
         />
         <button className="inline-flex h-10 items-center gap-2 rounded-2xl bg-plum px-4 text-sm text-white shadow-soft" type="submit">

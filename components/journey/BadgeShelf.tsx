@@ -20,9 +20,8 @@ const badges = [
   { name: "Voltage Badge", unlockAt: 60, Icon: Zap },
   { name: "Fairy Badge", unlockAt: 78, Icon: Sparkles },
   { name: "Psychic Badge", unlockAt: 92, Icon: Eye },
-  { name: "Iceberg Badge", unlockAt: 985, Icon: Snowflake }
+  { name: "Iceberg Badge", unlockAt: 98, Icon: Snowflake }
 ];
-
 export function BadgeShelf() {
   const { journeyPercent } = useJourneyProgress();
 

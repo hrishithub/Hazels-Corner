@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useMemo } from "react";
 import { useLocalStorage } from "@/lib/storage";
+import { journeyTotalDays } from "@/lib/constants";
 import { getDaysLeft } from "@/lib/time";
 
 export type PlannerTask = {
@@ -22,8 +23,9 @@ type JourneyProgressContextValue = {
   setDays: (days: PlannerDay[]) => void;
   completedTasks: number;
   totalTasks: number;
-  completionPercent: number;
-  softXp: number;
+  weeklyCompletionPercent: number;
+  weeklyXp: number;
+  companionEnergy: number;
   daysLeft: number;
   journeyPercent: number;
   companionStage: 1 | 2 | 3;
@@ -59,11 +61,12 @@ export function JourneyProgressProvider({ children }: { children: React.ReactNod
     const tasks = days.flatMap((day) => day.tasks);
     const completedTasks = tasks.filter((task) => task.done).length;
     const totalTasks = Math.max(1, tasks.length);
-    const completionPercent = Math.round((completedTasks / totalTasks) * 100);
+    const weeklyCompletionPercent = Math.round((completedTasks / totalTasks) * 100);
     const daysLeft = getDaysLeft();
-    const timePercent = clamp(((100 - daysLeft) / 100) * 100);
-    const journeyPercent = Math.round(clamp(timePercent * 0.78 + completionPercent * 0.22));
-    const softXp = Math.round(journeyPercent * 18 + completedTasks * 35);
+    const elapsedDays = journeyTotalDays - daysLeft;
+    const journeyPercent = Math.round(clamp((elapsedDays / journeyTotalDays) * 100));
+    const weeklyXp = completedTasks * 45 + Math.round(weeklyCompletionPercent * 4);
+    const companionEnergy = Math.max(12, weeklyCompletionPercent);
     const companionStage = daysLeft > 60 ? 1 : daysLeft > 30 ? 2 : 3;
 
     return {
@@ -71,8 +74,9 @@ export function JourneyProgressProvider({ children }: { children: React.ReactNod
       setDays,
       completedTasks,
       totalTasks,
-      completionPercent,
-      softXp,
+      weeklyCompletionPercent,
+      weeklyXp,
+      companionEnergy,
       daysLeft,
       journeyPercent,
       companionStage: companionStage as 1 | 2 | 3

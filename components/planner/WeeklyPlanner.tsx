@@ -6,7 +6,7 @@ import { useJourneyProgress } from "@/components/journey/JourneyProgressContext"
 import { PlannerDayColumn } from "@/components/planner/PlannerDayColumn";
 
 export function WeeklyPlanner() {
-  const { completionPercent, days, setDays, softXp } = useJourneyProgress();
+  const { days, setDays, weeklyCompletionPercent, weeklyXp } = useJourneyProgress();
 
   return (
     <div className="space-y-5">
@@ -21,18 +21,18 @@ export function WeeklyPlanner() {
               <h4 className="font-display text-4xl text-ink">Turn study goals into a Pokémon journey</h4>
             </div>
           </div>
-          <div className="pixel-corners bg-white/58 px-4 py-2 text-sm text-plum">{softXp} XP</div>
+          <div className="pixel-corners bg-white/58 px-4 py-2 text-sm text-plum">{weeklyXp} weekly XP</div>
         </div>
 
         <div className="mt-5">
           <div className="mb-2 flex items-center justify-between text-sm text-ink/62">
             <span>Route glow</span>
-            <span>{completionPercent}% complete</span>
+            <span>{weeklyCompletionPercent}% complete</span>
           </div>
           <div className="h-4 overflow-hidden rounded-full bg-white/48">
             <motion.div
               className="h-full rounded-full bg-gradient-to-r from-rose via-lilac to-butter"
-              animate={{ width: `${Math.max(8, completionPercent)}%` }}
+              animate={{ width: `${Math.max(8, weeklyCompletionPercent)}%` }}
             />
           </div>
         </div>

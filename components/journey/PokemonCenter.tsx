@@ -5,11 +5,11 @@ import Image from "next/image";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
 export function PokemonCenter() {
-  const { completedTasks, completionPercent } = useJourneyProgress();
+  const { completedTasks, weeklyCompletionPercent } = useJourneyProgress();
   const message =
     completedTasks === 0
       ? "Professor Oak: Consistent training is what moves trainers forward.."
-      : completionPercent > 70
+      : weeklyCompletionPercent > 70
         ? "Nurse Joy: Your route lights are warm today. Please rest your eyes too."
         : "Professor Oak: Every small completion is one quiet step closer to Pediatrics.";
 

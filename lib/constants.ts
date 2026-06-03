@@ -1,4 +1,5 @@
 export const examDate = "2026-08-30T00:00:00+05:30";
+export const journeyTotalDays = 90;
 
 export const navItems = [
   { href: "/", label: "Home" },

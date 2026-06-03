@@ -12,9 +12,8 @@ const companions = {
 };
 
 export function CompanionEvolution() {
-  const { companionStage, completionPercent, softXp } = useJourneyProgress();
+  const { companionEnergy, companionStage, weeklyXp } = useJourneyProgress();
   const companion = companions[companionStage];
-  const xpWidth = Math.max(12, completionPercent);
 
   return (
     <section className="glass rounded-[2rem] p-5">
@@ -38,13 +37,13 @@ export function CompanionEvolution() {
       <div className="mt-5">
         <div className="mb-2 flex items-center justify-between text-xs uppercase tracking-[0.16em] text-ink/55">
           <span>soft XP</span>
-          <span>{softXp} XP</span>
+          <span>{weeklyXp} weekly XP</span>
         </div>
         <div className="h-3 overflow-hidden rounded-full bg-white/48">
-          <motion.div className="h-full rounded-full bg-gradient-to-r from-rose via-lilac to-butter" animate={{ width: `${xpWidth}%` }} />
+          <motion.div className="h-full rounded-full bg-gradient-to-r from-rose via-lilac to-butter" animate={{ width: `${companionEnergy}%` }} />
         </div>
         <p className="mt-3 text-sm leading-6 text-ink/62">
-          The glow responds to planner progress, but evolution follows the passing days. No guilt, just movement.
+             Your companion grows alongside the journey.
         </p>
       </div>
 

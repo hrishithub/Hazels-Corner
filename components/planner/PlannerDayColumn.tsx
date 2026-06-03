@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Plus } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import { PlannerDay, PlannerTask } from "@/components/journey/JourneyProgressContext";
 import { TaskCard } from "@/components/planner/TaskCard";
 
@@ -14,6 +15,7 @@ export function PlannerDayColumn({
 }) {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
+  const [confirmingClear, setConfirmingClear] = useState(false);
 
   function addTask(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -45,6 +47,12 @@ export function PlannerDayColumn({
     updateTask(task.id, { ...task, title: nextTitle.trim(), note: nextNote.trim() });
   }
 
+  function clearDayTasks() {
+    if (day.tasks.length === 0) return;
+    onChange({ ...day, tasks: [] });
+    setConfirmingClear(false);
+  }
+
   return (
     <section className="glass min-h-[420px] rounded-[1.5rem] p-4">
       <div className="mb-4 flex items-start justify-between gap-3">
@@ -52,8 +60,60 @@ export function PlannerDayColumn({
           <p className="font-display text-2xl text-ink">{day.day}</p>
           <p className="mt-1 rounded-full bg-white/44 px-3 py-1 text-xs text-plum">Focus: {day.focus}</p>
         </div>
-        <span className="rounded-full bg-butter/35 px-2 py-1 text-xs text-ink/60">{day.tasks.filter((task) => task.done).length}/{day.tasks.length}</span>
+        <div className="flex items-center gap-2">
+          <span className="rounded-full bg-butter/35 px-2 py-1 text-xs text-ink/60">
+            {day.tasks.filter((task) => task.done).length}/{day.tasks.length}
+          </span>
+          <button
+            aria-label={`Clear all ${day.day} tasks`}
+            className="grid h-8 w-8 place-items-center rounded-full bg-white/42 text-ink/45 transition hover:bg-white/70 hover:text-plum disabled:cursor-not-allowed disabled:opacity-35"
+            disabled={day.tasks.length === 0}
+            onClick={() => setConfirmingClear(true)}
+            title="Clear this day"
+            type="button"
+          >
+            <Trash2 className="h-4 w-4" />
+          </button>
+        </div>
       </div>
+
+      <AnimatePresence>
+        {confirmingClear && (
+          <motion.div
+            className="fixed inset-0 z-50 grid place-items-center bg-ink/35 p-4 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="glass w-full max-w-sm rounded-[1.5rem] p-6 text-left shadow-glow"
+              initial={{ scale: 0.96, y: 16 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.96, y: 16 }}
+            >
+              <div className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-rose/25 text-plum">
+                <Trash2 className="h-5 w-5" />
+              </div>
+              <p className="font-display text-3xl text-ink">Clear {day.day}?</p>
+              <p className="mt-3 text-sm leading-6 text-ink/66">
+                This will delete all tasks listed for {day.day}. Individual tasks can still be removed one by one.
+              </p>
+              <div className="mt-6 flex justify-end gap-3">
+                <button
+                  className="h-11 rounded-2xl bg-white/60 px-4 text-sm text-plum transition hover:bg-white"
+                  onClick={() => setConfirmingClear(false)}
+                  type="button"
+                >
+                  Cancel
+                </button>
+                <button className="h-11 rounded-2xl bg-plum px-4 text-sm text-white shadow-soft" onClick={clearDayTasks} type="button">
+                  Clear tasks
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="space-y-3">
         {day.tasks.map((task) => (

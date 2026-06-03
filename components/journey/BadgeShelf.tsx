@@ -1,16 +1,26 @@
 "use client";
 
-import { Heart, Library, Moon, Shield, Sparkles, Umbrella, Waves } from "lucide-react";
+import {
+  Bug,
+  Mountain,
+  Music4,
+  Leaf,
+  Zap,
+  Sparkles,
+  Eye,
+  Snowflake
+} from "lucide-react";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
 const badges = [
-  { name: "Quiet Courage Badge", unlockAt: 5, Icon: Shield },
-  { name: "Rainy Route Badge", unlockAt: 18, Icon: Umbrella },
-  { name: "Healing Heart Badge", unlockAt: 32, Icon: Heart },
-  { name: "Night Library Badge", unlockAt: 46, Icon: Library },
-  { name: "Steady River Badge", unlockAt: 60, Icon: Waves },
-  { name: "Final Light Badge", unlockAt: 78, Icon: Sparkles },
-  { name: "Moonlit Brave Badge", unlockAt: 92, Icon: Moon }
+  { name: "Bug Badge", unlockAt: 5, Icon: Bug },
+  { name: "Cliff Badge", unlockAt: 18, Icon: Mountain },
+  { name: "Rumble Badge", unlockAt: 32, Icon: Music4 },
+  { name: "Plant Badge", unlockAt: 46, Icon: Leaf },
+  { name: "Voltage Badge", unlockAt: 60, Icon: Zap },
+  { name: "Fairy Badge", unlockAt: 78, Icon: Sparkles },
+  { name: "Psychic Badge", unlockAt: 92, Icon: Eye },
+  { name: "Iceberg Badge", unlockAt: 985, Icon: Snowflake }
 ];
 
 export function BadgeShelf() {

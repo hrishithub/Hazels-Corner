@@ -12,7 +12,7 @@ const companions = {
 };
 
 export function HomeCompanion() {
-  const { companionStage, completionPercent } = useJourneyProgress();
+  const { companionEnergy, companionStage } = useJourneyProgress();
   const companion = companions[companionStage];
 
   return (
@@ -33,7 +33,7 @@ export function HomeCompanion() {
       <div className="mt-5 h-3 w-full max-w-64 overflow-hidden rounded-full bg-white/48">
         <motion.div
           className="h-full rounded-full bg-gradient-to-r from-rose via-lilac to-butter"
-          animate={{ width: `${Math.max(12, completionPercent)}%` }}
+          animate={{ width: `${companionEnergy}%` }}
         />
       </div>
     </div>

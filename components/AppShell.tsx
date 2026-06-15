@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { BookOpen, CalendarDays, Heart, Home, Mail, Music, Sparkles, Wind } from "lucide-react";
+import { BarChart3, BookOpen, CalendarDays, Heart, Home, Mail, Music, Sparkles, Wind } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { navItems } from "@/lib/constants";
 import { getIstMood } from "@/lib/time";
 
-const icons = [Home, Mail, Music, Sparkles, CalendarDays, BookOpen, Wind];
+const icons = [Home, Mail, Music, Sparkles, CalendarDays, BarChart3, BookOpen, Wind];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

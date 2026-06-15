@@ -7,6 +7,7 @@ export const navItems = [
   { href: "/music", label: "Music Corner" },
   { href: "/pokemon", label: "Journey" },
   { href: "/planner", label: "Planner" },
+  { href: "/reports", label: "Reports" },
   { href: "/letters", label: "Letters" },
   { href: "/calm", label: "Calm Corner" }
 ];

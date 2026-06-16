@@ -159,6 +159,66 @@ export function PlannerDayColumn({
 
 
       <div className="mb-4 flex items-start justify-between gap-3">
+        {/* CLEAR DAY MODAL */}
+
+<AnimatePresence>
+  {confirmingClear && (
+    <motion.div
+      className="fixed inset-0 z-50 grid place-items-center bg-ink/35 p-4 backdrop-blur-sm"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+
+      <motion.div
+        className="glass w-full max-w-sm rounded-[1.5rem] p-6 shadow-glow"
+        initial={{ scale: 0.95, y: 20 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.95, y: 20 }}
+      >
+
+        <div className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-rose/25 text-plum">
+          <Trash2 className="h-5 w-5" />
+        </div>
+
+
+        <p className="font-display text-3xl text-ink">
+          Clear {day.day}?
+        </p>
+
+
+        <p className="mt-3 text-sm leading-6 text-ink/60">
+          This will remove all tasks from {day.day}.
+        </p>
+
+
+        <div className="mt-6 flex justify-end gap-3">
+
+          <button
+            className="h-11 rounded-2xl bg-white/60 px-4 text-sm text-plum"
+            onClick={() => setConfirmingClear(false)}
+            type="button"
+          >
+            Cancel
+          </button>
+
+
+          <button
+            className="h-11 rounded-2xl bg-plum px-4 text-sm text-white shadow-soft"
+            onClick={clearDayTasks}
+            type="button"
+          >
+            Clear tasks
+          </button>
+
+        </div>
+
+
+      </motion.div>
+
+    </motion.div>
+  )}
+</AnimatePresence>
 
         <div>
           <p className="font-display text-2xl text-ink">

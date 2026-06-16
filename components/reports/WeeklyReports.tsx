@@ -539,7 +539,8 @@ export function WeeklyReports() {
         <section className="glass rounded-[2rem] p-8 text-center">
           <BarChart3 className="mx-auto mb-4 h-10 w-10 text-plum" />
           <h2 className="font-display text-3xl text-ink">No reports yet</h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-ink/66">The first report can be generated on Sunday after planner tasks have been added.</p>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-ink/66">The first report can be generated on Sunday after you are done for the week.
+</p>
         </section>
       )}
     </div>

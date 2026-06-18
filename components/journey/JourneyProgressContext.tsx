@@ -68,6 +68,7 @@ export function JourneyProgressProvider({ children }: { children: React.ReactNod
     const weeklyXp = completedTasks * 45 + Math.round(weeklyCompletionPercent * 4);
     const companionEnergy = Math.max(12, weeklyCompletionPercent);
     const companionStage = daysLeft > 60 ? 1 : daysLeft > 30 ? 2 : 3;
+    
 
     return {
       days,

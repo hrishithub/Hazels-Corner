@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { AppShell } from "@/components/AppShell";
+import { MilestoneCelebration } from "@/components/celebration/MilestoneCelebration";
 import { JourneyProgressProvider } from "@/components/journey/JourneyProgressContext";
-import { UpdateBanner } from "@/components/common/update";
 
 export const metadata: Metadata = {
   title: "Hazel's Corner",
@@ -18,8 +18,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <JourneyProgressProvider>
-              <UpdateBanner />
           <AppShell>{children}</AppShell>
+          <MilestoneCelebration />
         </JourneyProgressProvider>
         <Analytics />
       </body>

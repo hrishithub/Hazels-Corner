@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
-const companions = {
+export const companions = {
   1: { name: "Fennekin", src: "/companions/stage1.png", line: "A playful fire fox with oversized ears and a spark of curiosity!" },
   2: { name: "Braixen", src: "/companions/stage2.png", line: "A clever wand-wielding fox that fights like a young magician!" },
   3: { name: "Delphox ", src: "/companions/stage3.png", line: "A mystical fire mage whose flames burn with wisdom and power!" }

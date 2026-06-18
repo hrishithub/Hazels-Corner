@@ -7,7 +7,7 @@ import { PlayerSprite } from "@/components/journey/PlayerSprite";
 import { RouteTooltip } from "@/components/journey/RouteTooltip";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
-const regions = [
+export const routeMilestones = [
   {
     name: "Quiet Forest",
     description: "breathe, begin, continue",
@@ -233,8 +233,8 @@ export function JourneyMap() {
           <PlayerSprite x={sprite.x} y={sprite.y} />
           <AmbientParticles />
 
-          {regions.map((region, index) => {
-            const nextUnlock = regions[index + 1]?.unlockAt ?? 101;
+          {routeMilestones.map((region, index) => {
+            const nextUnlock = routeMilestones[index + 1]?.unlockAt ?? 101;
             const active = journeyPercent >= region.unlockAt && journeyPercent < nextUnlock;
             return (
               <RouteTooltip

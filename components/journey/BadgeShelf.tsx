@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { useJourneyProgress } from "@/components/journey/JourneyProgressContext";
 
-const badges = [
+export const badgeMilestones = [
   { name: "Bug Badge", unlockAt: 5, Icon: Bug },
   { name: "Cliff Badge", unlockAt: 18, Icon: Mountain },
   { name: "Rumble Badge", unlockAt: 32, Icon: Music4 },
@@ -29,7 +29,7 @@ export function BadgeShelf() {
     <section className="glass rounded-[2rem] p-5">
       <p className="mb-4 font-display text-3xl text-ink">Badge Shelf</p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
-        {badges.map(({ name, unlockAt, Icon }) => {
+        {badgeMilestones.map(({ name, unlockAt, Icon }) => {
           const unlocked = journeyPercent >= unlockAt;
           return (
             <div

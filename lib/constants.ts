@@ -8,7 +8,7 @@ export const navItems = [
   { href: "/pokemon", label: "Journey" },
   { href: "/planner", label: "Planner" },
   { href: "/reports", label: "Reports" },
-  { href: "/letters", label: "Letters" },
+  //{ href: "/letters", label: "Letters" },
   { href: "/calm", label: "Calm Corner" }
 ];
 

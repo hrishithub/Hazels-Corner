@@ -3,16 +3,28 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { BarChart3, BookOpen, CalendarDays, Heart, Home, Mail, Music, Sparkles, Wind } from "lucide-react";
+import { BarChart3, BookOpen, CalendarDays, Heart, Home, Mail, Music, Package, Sparkles, Wind } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { navItems } from "@/lib/constants";
+import { deliveryStorageKey, isDeliveryAvailable, parseDeliveryState } from "@/lib/delivery";
 import { getIstMood } from "@/lib/time";
 
-const icons = [Home, Mail, Music, Sparkles, CalendarDays, BarChart3, BookOpen, Wind];
+const iconByHref = {
+  "/": Home,
+  "/open-when": Mail,
+  "/music": Music,
+  "/pokemon": Sparkles,
+  "/planner": CalendarDays,
+  "/reports": BarChart3,
+  "/letters": BookOpen,
+  "/calm": Wind,
+  "/delivery": Package
+};
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [mood, setMood] = useState("day");
+  const [showDelivery, setShowDelivery] = useState(false);
 
   useEffect(() => {
     function syncMood() {
@@ -26,6 +38,24 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     return () => window.clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    function syncDeliveryVisibility() {
+      const state = parseDeliveryState(window.localStorage.getItem(deliveryStorageKey));
+      setShowDelivery(isDeliveryAvailable(state));
+    }
+
+    syncDeliveryVisibility();
+    window.addEventListener("storage", syncDeliveryVisibility);
+    window.addEventListener("hazel-delivery-updated", syncDeliveryVisibility);
+    const id = window.setInterval(syncDeliveryVisibility, 60_000);
+
+    return () => {
+      window.removeEventListener("storage", syncDeliveryVisibility);
+      window.removeEventListener("hazel-delivery-updated", syncDeliveryVisibility);
+      window.clearInterval(id);
+    };
+  }, []);
+
   const greeting = useMemo(() => {
     if (mood === "morning") return "good morning";
     if (mood === "afternoon") return "soft afternoon";
@@ -33,6 +63,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     if (mood === "night") return "late-night corner";
     return "hello, Hazel";
   }, [mood]);
+
+  const visibleNavItems = useMemo(() => {
+    const items = [...navItems];
+    if (showDelivery) {
+      items.push({ href: "/delivery", label: "Delivery" });
+    }
+    return items;
+  }, [showDelivery]);
 
   return (
     <div className={mood === "night" ? "night" : ""}>
@@ -52,6 +90,20 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         ))}
       </div>
 
+      {pathname === "/delivery" ? (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+      ) : (
+
       <div className="relative mx-auto flex min-h-screen w-full max-w-[1480px] flex-col gap-4 p-3 sm:p-5 lg:flex-row lg:p-6">
         <aside className="glass sticky top-3 z-20 flex items-center justify-between rounded-[1.5rem] px-4 py-3 lg:top-6 lg:h-[calc(100vh-3rem)] lg:w-64 lg:flex-col lg:items-stretch lg:px-5 lg:py-6">
           <Link href="/" className="min-w-0">
@@ -60,8 +112,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </Link>
 
           <nav className="flex items-center gap-1 overflow-x-auto lg:mt-8 lg:flex-col lg:items-stretch lg:gap-2">
-            {navItems.map((item, index) => {
-              const Icon = icons[index];
+            {visibleNavItems.map((item) => {
+              const Icon = iconByHref[item.href as keyof typeof iconByHref] ?? Sparkles;
               const active = pathname === item.href;
               return (
                 <Link
@@ -99,6 +151,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </AnimatePresence>
         </main>
       </div>
+      )}
     </div>
   );
 }

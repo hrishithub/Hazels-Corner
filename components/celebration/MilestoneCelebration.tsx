@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Sparkles, X } from "lucide-react";
@@ -78,6 +79,7 @@ function getUnlockedMilestones(journeyPercent: number, companionStage: 1 | 2 | 3
 }
 
 export function MilestoneCelebration() {
+  const pathname = usePathname();
   const { companionStage, journeyPercent } = useJourneyProgress();
   const [activeMilestone, setActiveMilestone] = useState<CelebrationMilestone | null>(null);
   const [pendingMilestones, setPendingMilestones] = useState<CelebrationMilestone[]>([]);
@@ -141,6 +143,10 @@ export function MilestoneCelebration() {
 
   function closeCelebration() {
     setActiveMilestone(null);
+  }
+
+  if (pathname === "/delivery") {
+    return null;
   }
 
   return (

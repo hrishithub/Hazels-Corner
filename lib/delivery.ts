@@ -24,6 +24,7 @@ export function parseDeliveryState(value: string | null): DeliveryState | null {
   } catch {
     return null;
   }
+  
 }
 
 export function isDeliveryAvailable(state: DeliveryState | null, now = Date.now()) {

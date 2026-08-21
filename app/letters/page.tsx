@@ -2,11 +2,23 @@ import type { ReactNode } from "react";
 import { readFile } from "fs/promises";
 import path from "path";
 import { ArrowLeft, ArrowRight, MailOpen } from "lucide-react";
+import { LetterMusicPlayer } from "@/components/letters/LetterMusicPlayer";
 
 const currentLetter = {
   title: "Pre-exam letter",
   description: "A best-of-luck letter before the exam.",
   filename: "pre-exam.md"
+};
+
+const letterMusic = {
+  songName: "You're on Your Own, Kid",
+  artistName: "Taylor Swift",
+  audioSrc: "/letters/music/song.mp3",
+  coverSrc: "/letters/music/cover.jpg",
+  note: "Checkout this page a day after your exam :)",
+  triggerId: "letters-music-trigger",
+  containerId: "letters-reading-section",
+  autoPlay: true
 };
 
 function renderInlineMarkdown(text: string) {
@@ -92,8 +104,8 @@ export default async function LettersPage() {
   const markdown = await getLetterMarkdown();
 
   return (
-    <main className="pb-14 pt-4 sm:pt-8">
-      <section className="mx-auto w-full max-w-4xl">
+    <main className="pb-56 pt-4 sm:pb-64 sm:pt-8">
+      <section className="mx-auto w-full max-w-4xl" id="letters-reading-section">
         <nav className="glass mb-5 flex items-center justify-between gap-3 rounded-[1.5rem] px-4 py-3 text-sm text-ink/70 sm:px-5">
           <button
             aria-disabled="true"
@@ -127,7 +139,9 @@ export default async function LettersPage() {
 
           <div className="space-y-6">{renderMarkdown(markdown)}</div>
         </article>
+        <div aria-hidden="true" className="h-32 sm:h-36" id="letters-music-trigger" />
       </section>
+      <LetterMusicPlayer {...letterMusic} />
     </main>
   );
 }

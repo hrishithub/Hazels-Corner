@@ -5,8 +5,8 @@ import { ArrowLeft, ArrowRight, MailOpen } from "lucide-react";
 import { LetterMusicPlayer } from "@/components/letters/LetterMusicPlayer";
 
 const currentLetter = {
-  title: "Pre-exam letter",
-  description: "A best-of-luck letter before the exam.",
+  title: "All the Best, Shreya",
+  description: "Just wanted to say this before the big day.",
   filename: "pre-exam.md"
 };
 

@@ -3,12 +3,12 @@ export const journeyTotalDays = 90;
 
 export const navItems = [
   { href: "/", label: "Home" },
+  { href: "/letters", label: "Letters" },
   { href: "/open-when", label: "Open When" },
   { href: "/music", label: "Music Corner" },
   { href: "/pokemon", label: "Journey" },
   { href: "/planner", label: "Planner" },
   { href: "/reports", label: "Reports" },
- // { href: "/letters", label: "Letters" },
   { href: "/calm", label: "Calm Corner" }
 ];
 

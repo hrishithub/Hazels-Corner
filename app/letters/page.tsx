@@ -5,17 +5,17 @@ import { ArrowLeft, ArrowRight, MailOpen } from "lucide-react";
 import { LetterMusicPlayer } from "@/components/letters/LetterMusicPlayer";
 
 const currentLetter = {
-  title: "All the Best, Shreya",
-  description: "Just wanted to say this before the big day.",
-  filename: "pre-exam.md"
+  title: "Somewhere Along the Way",
+  description: "Just a few things I've been meaning to put into words for a while.",
+  filename: "post-exam.md"
 };
 
 const letterMusic = {
-  songName: "You're on Your Own, Kid",
-  artistName: "Taylor Swift",
+  songName: "Coming Up Roses",
+  artistName: "Harry Styles",
   audioSrc: "/letters/music/song.mp3",
-  coverSrc: "/letters/music/cover.jpg",
-  note: "Checkout this page a day after your exam :)",
+  coverSrc: "/letters/music/harry.jpg",
+  note: "",
   triggerId: "letters-music-trigger",
   containerId: "letters-reading-section",
   autoPlay: true

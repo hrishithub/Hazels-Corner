@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { readFile } from "fs/promises";
+import path from "path";
 import { Heart, Sparkles } from "lucide-react";
-import { Countdown } from "@/components/home/Countdown";
+import { HomecomingLetter } from "@/components/home/HomecomingLetter";
 import { DailyNote } from "@/components/home/DailyNote";
 import { HomeCompanion } from "@/components/home/HomeCompanion";
 import { MoodCheckIn } from "@/components/home/MoodCheckIn";
@@ -26,17 +28,16 @@ const quickLinks = [
   }
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const letter = await readFile(path.join(process.cwd(), "content", "home-letter.md"), "utf8");
+
   return (
     <div className="space-y-5 pb-10">
       <section className="grid gap-5 pt-4 lg:grid-cols-[1.3fr_0.7fr] lg:pt-8">
         <div className="glass relative overflow-hidden rounded-[2rem] p-6 sm:p-8">
           <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-butter/30 blur-3xl" />
           <RhythmGreeting />
-          <div className="mt-7 max-w-2xl">
-            <p className="mb-3 font-display text-xl">NEET PG exam in</p>
-            <Countdown />
-          </div>
+          <HomecomingLetter markdown={letter} />
         </div>
 
         <HomeCompanion />

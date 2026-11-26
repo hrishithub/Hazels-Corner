@@ -18,7 +18,7 @@ I wanted to know you IRL, and I cared about the connection we had. And consideri
 
 I respect why you said we needed distance, and I've respected your boundary by not reaching out. I don't regret what we shared, and I'm genuinely glad I got to know you. I just don't want to pretend that part of me doesn't exist while talking to you. If we start talking now like we used to, I'll still feel the same.
 
-I also understand your side. You had your own feelings, your own boundaries, and perhaps you felt that maintaining the same connection would only make things difficult for both of us. I don't hold that against you. You were honest about what you were comfortable with, and I respect that. You deserve to have friendships and relationships that feel comfortable, peaceful, and right for you too.
+I also understand your side. I know you had your own reasons, and I respect that. You've always been one of the kindest people I've known, and I'll always remember that. I genuinely wish you the best.
 
 So, yeah! This is the end of Hazel's Corner.
 

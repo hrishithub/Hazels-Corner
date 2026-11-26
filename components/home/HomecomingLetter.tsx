@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Heart, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { ReactNode } from "react";
 
@@ -48,9 +48,33 @@ function renderMarkdown(markdown: string) {
 export function HomecomingLetter({ markdown }: { markdown: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function openLetter() {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.currentTime = 0;
+      void audio.play().catch(() => {});
+    }
+    setIsOpen(true);
+  }
+
+  function closeLetter() {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     setPortalRoot(document.body);
+  }, []);
+
+  useEffect(() => () => {
+    audioRef.current?.pause();
+    if (audioRef.current) audioRef.current.currentTime = 0;
   }, []);
 
   useEffect(() => {
@@ -58,7 +82,7 @@ export function HomecomingLetter({ markdown }: { markdown: string }) {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") closeLetter();
     };
     window.addEventListener("keydown", closeOnEscape);
     return () => {
@@ -72,7 +96,7 @@ export function HomecomingLetter({ markdown }: { markdown: string }) {
       <button
         aria-label="Open your letter"
         className="group relative mt-7 block h-36 w-full max-w-2xl overflow-hidden rounded-[1.5rem] border border-[#d8bfd1] bg-[#f7e9ee] shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-plum/60 sm:h-44"
-        onClick={() => setIsOpen(true)}
+        onClick={openLetter}
         type="button"
         aria-haspopup="dialog"
       >
@@ -87,6 +111,8 @@ export function HomecomingLetter({ markdown }: { markdown: string }) {
         </span>
       </button>
 
+      <audio ref={audioRef} loop preload="auto" src="/home/music/letter.mp3" />
+
       {portalRoot && createPortal(
         <AnimatePresence>
           {isOpen && (
@@ -96,7 +122,7 @@ export function HomecomingLetter({ markdown }: { markdown: string }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onMouseDown={(event) => {
-                if (event.target === event.currentTarget) setIsOpen(false);
+                if (event.target === event.currentTarget) closeLetter();
               }}
             >
               <motion.article
@@ -112,7 +138,7 @@ export function HomecomingLetter({ markdown }: { markdown: string }) {
                 <button
                   aria-label="Close letter"
                   className="absolute right-4 top-4 z-10 inline-flex h-10 items-center gap-1.5 rounded-full border border-plum/15 bg-white/95 px-3 text-sm font-medium text-ink shadow-soft transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-plum/60"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeLetter}
                   type="button"
                 >
                   <X className="h-4 w-4" />

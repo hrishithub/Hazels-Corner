@@ -16,7 +16,7 @@ There's something I've come to realise with time. I don't think I can talk to yo
 
 I wanted to know you IRL, and I cared about the connection we had. And considering how much we'd spoken, the things we'd shared, and the overall connection we'd developed over that year, I don't think it was particularly unusual to feel that way. Honestly, if I'd talked to anyone the way I talked to you, for that long, I probably would've felt the same about meeting them, regardless of their gender or age. Those feelings were genuine, and I don't want to look back at them as something I needed to fix or suppress because you didn't like that part of me. I also understand that you may not have felt the same way, and that's completely okay. You never owed me anything. I'm just glad I got to be a little part of your journey.
 
-I respect why you said we needed distance, and I've respected your boundary by not reaching out. I don't regret what we shared, and I'm genuinely glad I got to know you. I just don't want to pretend that part of me doesn't exist while talking to you. If we start talking now like we used to, I'll still feel the same.
+I respect why you said we needed distance, and I've respected your boundary by not reaching out. I don't regret what we shared, and I'm genuinely glad I got to know you. I just don't want to pretend that part of me doesn't exist while talking to you. If we start talking now like we used to, I'll probably still feel the same.
 
 I also understand your side. I know you had your own reasons, and I respect that. You've always been one of the kindest people I've known, and I'll always remember that. I genuinely wish you the best.
 
